@@ -16,7 +16,6 @@ BuildRequires:	perl-Params-Validate
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl-Test-Simple
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 These modules are meant for perl developers of plugins for Nagios
