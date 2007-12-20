@@ -2,7 +2,7 @@
 
 Summary:	A family of perl modules to streamline writing Nagios plugins
 Name:		perl-%{real_name}
-Version:	0.21
+Version:	0.22
 Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
@@ -16,6 +16,7 @@ BuildRequires:	perl-Params-Validate
 BuildRequires:	perl-Test-Pod
 BuildRequires:	perl-Test-Simple
 BuildArch:	noarch
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 These modules are meant for perl developers of plugins for Nagios
@@ -46,4 +47,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/Nagios/Plugin*
 %{_mandir}/*/*
-
