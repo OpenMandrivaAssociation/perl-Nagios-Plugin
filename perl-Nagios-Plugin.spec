@@ -2,13 +2,12 @@
 
 Summary:	A family of perl modules to streamline writing Nagios plugins
 Name:		perl-%{module}
-Version:	0.29
+Version:	0.30
 Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/Nagios/%{module}-%{version}.tar.gz
-Patch:      Nagios-Plugin-0.29-fix-tests.patch
 BuildRequires:	perl(Class::Accessor)
 BuildRequires:	perl(Config::Tiny)
 BuildRequires:	perl(Math::Calc::Units)
@@ -25,7 +24,6 @@ common functions required to do checking of a particular service.
 
 %prep
 %setup -q -n %{module}-%{version} 
-%patch -p 1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
