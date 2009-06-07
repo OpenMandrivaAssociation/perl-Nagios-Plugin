@@ -2,7 +2,7 @@
 
 Summary:	A family of perl modules to streamline writing Nagios plugins
 Name:		perl-%{module}
-Version:	0.32
+Version:	0.33
 Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
