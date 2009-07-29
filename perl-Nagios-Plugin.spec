@@ -1,13 +1,16 @@
-%define module Nagios-Plugin
+%define upstream_name    Nagios-Plugin
+%define upstream_version 0.33
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	A family of perl modules to streamline writing Nagios plugins
-Name:		perl-%{module}
-Version:	0.33
-Release:	%mkrel 1
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Nagios/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Nagios/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl(Class::Accessor)
 BuildRequires:	perl(Config::Tiny)
 BuildRequires:	perl(Math::Calc::Units)
@@ -15,7 +18,7 @@ BuildRequires:	perl(Params::Validate)
 BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Simple)
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 These modules are meant for perl developers of plugins for Nagios
@@ -23,7 +26,7 @@ These modules are meant for perl developers of plugins for Nagios
 common functions required to do checking of a particular service.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -34,7 +37,6 @@ make test
 
 %install
 rm -rf %{buildroot}
-
 %makeinstall_std
 
 %clean 
