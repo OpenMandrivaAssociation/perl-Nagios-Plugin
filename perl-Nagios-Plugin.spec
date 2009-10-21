@@ -2,15 +2,17 @@
 %define upstream_version 0.33
 
 Name:       perl-%{upstream_name}
+%if %mdkversion > 200900
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
-
+%else
+Version:    %{upstream_version}
+%if
+Release:    %mkrel 2
 Summary:	A family of perl modules to streamline writing Nagios plugins
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Nagios/%{upstream_name}-%{upstream_version}.tar.gz
-
 BuildRequires:	perl(Class::Accessor)
 BuildRequires:	perl(Config::Tiny)
 BuildRequires:	perl(Math::Calc::Units)
