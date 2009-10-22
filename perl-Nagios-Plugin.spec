@@ -6,7 +6,7 @@ Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
 %else
 Version:    %{upstream_version}
-%if
+%endif
 Release:    %mkrel 2
 Summary:	A family of perl modules to streamline writing Nagios plugins
 License:	GPL+ or Artistic
