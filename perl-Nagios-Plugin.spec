@@ -1,5 +1,5 @@
 %define upstream_name    Nagios-Plugin
-%define upstream_version 0.33
+%define upstream_version 0.34
 
 Name:       perl-%{upstream_name}
 %if %mdkversion > 200900
@@ -7,7 +7,7 @@ Version:    %perl_convert_version %{upstream_version}
 %else
 Version:    %{upstream_version}
 %endif
-Release:    %mkrel 2
+Release:    %mkrel 1
 Summary:	A family of perl modules to streamline writing Nagios plugins
 License:	GPL+ or Artistic
 Group:		Development/Perl
