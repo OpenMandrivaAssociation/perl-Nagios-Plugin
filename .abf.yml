@@ -1,2 +1,4 @@
+removed_sources:
+  Nagios-Plugin-0.35.tar.gz: 99ead726d5d95bbcbefe0fa203d3821065c19ff4
 sources:
-  "Nagios-Plugin-0.35.tar.gz": 99ead726d5d95bbcbefe0fa203d3821065c19ff4
+  Nagios-Plugin-0.36.tar.gz: 51ef7b410691d43530b97904efeb1703f3a5032d

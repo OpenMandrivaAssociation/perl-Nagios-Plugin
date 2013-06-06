@@ -1,14 +1,13 @@
 %define upstream_name    Nagios-Plugin
-%define upstream_version 0.35
-
+%define upstream_version 0.36
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 0.36
+Release:	1
 Summary:	A family of perl modules to streamline writing Nagios plugins
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Nagios/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Nagios/Nagios-Plugin-0.36.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Class::Accessor)
@@ -107,3 +106,4 @@ make test
 
 * Thu Oct 11 2007 Oden Eriksson <oeriksson@mandriva.com> 0.21-1mdv2008.1
 - initial Mandriva package 
+
