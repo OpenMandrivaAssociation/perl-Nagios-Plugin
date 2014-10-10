@@ -2,7 +2,7 @@
 %define upstream_version 0.36
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.36
-Release:	1
+Release:	2
 Summary:	A family of perl modules to streamline writing Nagios plugins
 License:	GPL+ or Artistic
 Group:		Development/Perl
