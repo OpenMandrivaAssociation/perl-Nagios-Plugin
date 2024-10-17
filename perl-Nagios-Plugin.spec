@@ -6,7 +6,7 @@ Release:	3
 Summary:	A family of perl modules to streamline writing Nagios plugins
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Nagios/Nagios-Plugin-0.36.tar.gz
 
 BuildRequires:	perl-devel
